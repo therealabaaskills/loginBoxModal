@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="formstyle.css">
+    <title>Document</title>
+</head>
+
+<body id="gradient">
+    <div class="container">
+        <div class="bckColor">
+            <div class="changebtn">
+                <img src="https://img.icons8.com/color/48/000000/fill-color.png" />
+            </div>
+            <div class="colors">
+                <input type="color" oninput="setGradient()" class="colorPicker color1" value="#00ff00">
+                <input type="color" oninput="setGradient()" class="colorPicker color2" value="#ff0000">
+            </div>
+        </div>
+        <!-- open modal btn -->
+        <div class="btn  modal-toggle">Open form</div>
+        <!-- modal -->
+        <div id="popup" class="modal">
+            <!-- modal content -->
+            <div class="content">
+                <!-- close modal btn -->
+                <span class="close modal-toggle">&times;</span>
+                <!-- login form -->
+                <form action="" method="POST" class="loginform">
+                    <div class="msg"></div>
+                    <!-- email or username input -->
+                    <input type="text" class="field email" name="email" id="email" placeholder="Email">
+                    <!-- Password input -->
+                    <div class="passfield">
+                        <span class="togglePass"></span>
+                        <input type="password" class="field password" name="password" id="password" placeholder="Password">
+                        <span class="right-icon" id="" onclick="checkpass()"><i class="fas fa-eye-slash show"></i></span>
+                    </div>
+                    <!-- login btn -->
+                    <button class="loginbtn" id="loginbtn"> Login</button>
+                </form>
+            </div>
+            <!-- end -->
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
